@@ -1,11 +1,9 @@
-<%- include('header');-%>
+<%- include('partials/header');-%>
 
-    <h1>Read More</h1>
-    <!-- <div class="ReadMore> -->
-        <% for(let i=0;i<output.length;i++){ %>
-            <h1> <%= (i+1) + '.' + title[i] %> </h1>
-            <p> <%= output[i] %> <p>
-        <% } %>
-    <!-- </div> -->
+    <h1>Home</h1>
+    <% for(let i=0;i<title.length;i++){ %>
+        <h1> <%= (i+1) + '.' + title[i] %> </h1>
+        <p style="display: inline-block; width: fit-content;"><%= output[title[i]] %></p>
+    <% } %>
 
-<%- include('footer'); -%>
+<%- include('partials/footer'); -%>

@@ -1,13 +1,13 @@
-<%- include('header');-%>
+<%- include('partials/header');-%>
 
     <h1>Home</h1>
-    <% for(let i=0;i<output.length;i++){ %>
+    <% for(let i=0;i<title.length;i++){ %>
         <h1> <%= (i+1) + '.' + title[i] %> </h1>
         <% check %>
-            <p style="display: inline-block; width: fit-content;"><%= output[i] %></p>
-            <% if(check[i].length> 100){ %>
-                <a href="/ReadMore" >Read More</a>
+            <p style="display: inline-block; width: fit-content;"><%= output[title[i]] %></p>
+            <% if(check[title[i]].length> 100){ %>
+                <a name=<%= title[i] %> href="/objectPrint/<%= title[i] %>" >Read More</a>
             <% } %>
     <% } %>
 
-<%- include('footer'); -%>
+<%- include('partials/footer'); -%>
