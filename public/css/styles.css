@@ -4,20 +4,20 @@ body {
   min-height: 1000px;
   padding: 20px 30px 20px 30px;
 }
-*{
+
+* {
   font-family: 'helvetica neue';
 }
 
-textarea{
+textarea {
   border: none;
 }
-.input{
-  font-size: 20px;
-  border-radius: 70%;
-  max-width: 100%;
+
+button {
+  margin-top: 50px;
 }
 
-.ReadMore{
+.ReadMore {
   min-width: 400px;
   background-color: dimgrey;
 }
@@ -30,7 +30,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 50px;
-  background-color:gray;
+  background-color: gray;
   color: white;
   text-align: center;
 }
