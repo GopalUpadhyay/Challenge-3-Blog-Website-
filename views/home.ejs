@@ -4,13 +4,15 @@
         <h1>
             <%= (i+1) + '.' + title[i] %>
         </h1>
-        <% check %>
-            <p style="display: inline-block; width: fit-content;">
-                <%= output[title[i]] %>
-            </p>
-            <% if(check[title[i]].length> 100){ %>
+            
+            <% if(output[title[i]].length> 100){ %>
+                <% let temp = output[title[i]].substr(0, 100) + ('...') %>
+                <p style="display: inline-block;"><%= temp %></p>
                 <a name=<%=title[i] %> href="/ReadMore/<%= title[i] %>" >Read More</a>
-                <% } %>
-                    <% } %>
+            <% } else { %>
+                <p> <%= output[title[i]]; %> </p>
+            <% } %>
+    <% } %>
 
-                        <%- include('partials/footer'); -%>
+
+<%- include('partials/footer'); -%>
