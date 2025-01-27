@@ -7,15 +7,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-let output = [];
-let title = [];
-
-
-
-
-// app.get('/:postName', (req, res)=>{
-//     console.log(req.params.postName);
-// })
+let shorter = {Home : 'This Is The First Line Of This Blog WebeSite.'};
+let fullData = {Home : 'This Is The First Line Of This Blog WebeSite.'};
 
 app.get('/', (req, res) => {    
     res.render('home', { output: temp , title : title, check : output});
