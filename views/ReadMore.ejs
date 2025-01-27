@@ -1,0 +1,11 @@
+<%- include('header');-%>
+
+    <h1>Read More</h1>
+    <!-- <div class="ReadMore> -->
+        <% for(let i=0;i<output.length;i++){ %>
+            <h1> <%= (i+1) + '.' + title[i] %> </h1>
+            <p> <%= output[i] %> <p>
+        <% } %>
+    <!-- </div> -->
+
+<%- include('footer'); -%>

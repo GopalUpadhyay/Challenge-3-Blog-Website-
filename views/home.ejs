@@ -1,0 +1,13 @@
+<%- include('header');-%>
+
+    <h1>Home</h1>
+    <% for(let i=0;i<output.length;i++){ %>
+        <h1> <%= (i+1) + '.' + title[i] %> </h1>
+        <% check %>
+            <p style="display: inline-block; width: fit-content;"><%= output[i] %></p>
+            <% if(check[i].length> 100){ %>
+                <a href="/ReadMore" >Read More</a>
+            <% } %>
+    <% } %>
+
+<%- include('footer'); -%>
